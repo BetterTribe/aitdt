@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class User(models.Model):
     FEMALE = 'F'
     MALE = 'M'
@@ -17,6 +19,7 @@ class User(models.Model):
         default=MALE,
     )
 
+
 class Query(models.Model):
-    query = models.CharField(max=250),
-    location = models.CharField(max=250)
+    query = models.CharField(max_length=250),
+    location = models.CharField(max_length=250)
